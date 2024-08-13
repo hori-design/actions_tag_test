@@ -1,3 +1,3 @@
 # GitHub Actions - Tag Test
 
-GitHub Actionsでタグのトリガーをテストするためのリポジトリです。
+GitHub Actionsで、タグのトリガーをテストするためのリポジトリです。
