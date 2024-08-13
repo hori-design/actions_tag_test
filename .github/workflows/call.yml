@@ -1,0 +1,14 @@
+name: Call Action
+
+on:
+  workflow_call:
+
+jobs:
+  call:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Echo
+        run: echo "実行された"

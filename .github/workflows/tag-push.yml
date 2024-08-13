@@ -11,6 +11,14 @@ on:
       - v**
 
 jobs:
+  call_1:
+    if: github.event_name == 'push'
+    uses: ./.github/workflows/call.yml
+
+  call_2:
+    uses: ./.github/workflows/call.yml
+    if: github.event_name == 'pull_request'
+
   info:
     runs-on: ubuntu-latest
     steps:
