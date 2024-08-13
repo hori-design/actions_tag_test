@@ -17,26 +17,26 @@ jobs:
 
   call_2:
     uses: ./.github/workflows/call.yml
-    if: github.event_name == 'pull_request'
-
-  info:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Echo event name
-        run: echo ${{ github.event_name }}
-
-      - name: Echo ref
-        run: echo ${{ github.ref }}
-
-  event_name_if:
     if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
-      - name: Echo
-        run: echo "実行された"
+#  info:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v4
+#
+#      - name: Echo event name
+#        run: echo ${{ github.event_name }}
+#
+#      - name: Echo ref
+#        run: echo ${{ github.ref }}
+#
+#  event_name_if:
+#    if: github.event_name == 'push'
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v4
+#
+#      - name: Echo
+#        run: echo "実行された"
